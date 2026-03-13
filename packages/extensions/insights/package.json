@@ -29,15 +29,15 @@
   },
   "scripts": {
     "cleanup": "rimraf dist",
-    "dev": "tsdown --watch",
+    "dev": "node api.js && tsdown --watch",
     "lint": "eslint src --quiet",
     "lint:fix": "eslint src --fix",
     "lint:styles": "stylelint \"src/**/*.{scss,sass,vue}\" --cache",
     "lint:styles:fix": "stylelint \"src/**/*.{scss,sass,vue}\" --fix --cache",
     "typecheck": "vue-tsc --noEmit",
-    "build:backend": "tsdown",
-    "build:frontend": "vite build",
-    "build": "pnpm cleanup && pnpm run \"/^build:.*/\"",
+    "build:backend": "node api.js && tsdown",
+    "build:frontend": "node api.js && vite build",
+    "build": "node api.js && pnpm cleanup && pnpm run \"/^build:.*/\"",
     "preview": "vite preview"
   },
   "peerDependencies": {

@@ -11,9 +11,9 @@
   },
   "scripts": {
     "clean": "rimraf dist .turbo",
-    "dev": "pnpm watch",
-    "build": "tsc --noEmit",
-    "build-node-dev": "tsc",
+    "dev": "node api.js && pnpm watch",
+    "build": "node api.js && tsc --noEmit",
+    "build-node-dev": "node api.js && tsc",
     "format": "biome format --write .",
     "format:check": "biome ci .",
     "lint": "eslint src --quiet",
