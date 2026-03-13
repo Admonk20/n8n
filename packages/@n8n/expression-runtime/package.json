@@ -14,8 +14,8 @@
     "./*": "./*"
   },
   "scripts": {
-    "build": "tsc --build tsconfig.build.esm.json tsconfig.build.cjs.json && pnpm build:runtime",
-    "build:runtime": "node esbuild.config.js",
+    "build": "node init && tsc --build tsconfig.build.esm.json tsconfig.build.cjs.json && pnpm build:runtime",
+    "build:runtime": "node init && node esbuild.config.js",
     "test": "vitest run",
     "test:dev": "vitest --watch --silent false",
     "typecheck": "tsc --noEmit"

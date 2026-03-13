@@ -26,8 +26,8 @@
     }
   },
   "scripts": {
-    "dev": "tsdown --watch",
-    "build": "tsdown",
+    "dev": "node init && tsdown --watch",
+    "build": "node init && tsdown",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

@@ -20,10 +20,10 @@
   },
   "scripts": {
     "clean": "rimraf dist .turbo",
-    "dev": "pnpm watch",
+    "dev": "node init && pnpm watch",
     "typecheck": "tsc --noEmit",
-    "build:vite": "vite build",
-    "build": "tsc --build tsconfig.build.esm.json tsconfig.build.cjs.json",
+    "build:vite": "node init && vite build",
+    "build": "node init && tsc --build tsconfig.build.esm.json tsconfig.build.cjs.json",
     "format": "biome format --write .",
     "format:check": "biome ci .",
     "lint": "eslint src --quiet",
